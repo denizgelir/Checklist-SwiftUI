@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    @State var showAddView = false
+        
+    @State private var showAddView = false
+    @State private var selection: Set<Item> = []
     
     var addButton: some View {
         Button(action: {
@@ -25,9 +26,11 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             List(items,id: \.name) { item in
-                ChecklistRow(item: item)
+                ChecklistRow(item: item,isExpanded: self.selection.contains(item))
                     .buttonStyle(PlainButtonStyle())
-                }
+                    .onTapGesture { self.selectDeselect(item: item) }
+                    .animation(.easeInOut)
+            }
             .navigationBarTitle("Check It")
             .navigationBarItems(trailing: addButton)
             .offset(x: 0, y: 20)
@@ -37,6 +40,16 @@ struct HomeView: View {
         }
         
     }
+    
+    func selectDeselect(item: Item) {
+        if selection.contains(item) {
+            selection.remove(item)
+        }else{
+            selection.insert(item)
+        }
+    }
+    
+    
 }
 
 struct HomeView_Previews: PreviewProvider {

@@ -62,15 +62,11 @@
 		5D3B608924E5221D007A4CCB /* SwiftUI-App */ = {
 			isa = PBXGroup;
 			children = (
-				5D3B608A24E5221D007A4CCB /* AppDelegate.swift */,
-				5D3B608C24E5221D007A4CCB /* SceneDelegate.swift */,
-				5D3B609E24E52E20007A4CCB /* HomeView.swift */,
-				5D5CAE7B24E545AD00205200 /* AddView.swift */,
-				5D5CAE7D24E67F2A00205200 /* ChecklistRow.swift */,
-				5D5CAE7924E53B9600205200 /* ItemModel.swift */,
-				5D3B609024E5221F007A4CCB /* Assets.xcassets */,
-				5D3B609524E5221F007A4CCB /* LaunchScreen.storyboard */,
-				5D3B609824E5221F007A4CCB /* Info.plist */,
+				5D5CAE8224E6CC0400205200 /* App */,
+				5D5CAE7F24E6CBE000205200 /* Home */,
+				5D5CAE8024E6CBF000205200 /* AddItem */,
+				5D5CAE8124E6CBFB00205200 /* Model */,
+				5D5CAE8324E6CC1000205200 /* Resources */,
 				5D3B609224E5221F007A4CCB /* Preview Content */,
 			);
 			path = "SwiftUI-App";
@@ -82,6 +78,50 @@
 				5D3B609324E5221F007A4CCB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5D5CAE7F24E6CBE000205200 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5D3B609E24E52E20007A4CCB /* HomeView.swift */,
+				5D5CAE7D24E67F2A00205200 /* ChecklistRow.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5D5CAE8024E6CBF000205200 /* AddItem */ = {
+			isa = PBXGroup;
+			children = (
+				5D5CAE7B24E545AD00205200 /* AddView.swift */,
+			);
+			path = AddItem;
+			sourceTree = "<group>";
+		};
+		5D5CAE8124E6CBFB00205200 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D5CAE7924E53B9600205200 /* ItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D5CAE8224E6CC0400205200 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5D3B608A24E5221D007A4CCB /* AppDelegate.swift */,
+				5D3B608C24E5221D007A4CCB /* SceneDelegate.swift */,
+				5D3B609524E5221F007A4CCB /* LaunchScreen.storyboard */,
+				5D3B609824E5221F007A4CCB /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5D5CAE8324E6CC1000205200 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D3B609024E5221F007A4CCB /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +340,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-App/Preview Content\"";
 				DEVELOPMENT_TEAM = 4AYSN24S6A;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "SwiftUI-App/Info.plist";
+				INFOPLIST_FILE = "SwiftUI-App/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,7 +360,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-App/Preview Content\"";
 				DEVELOPMENT_TEAM = 4AYSN24S6A;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "SwiftUI-App/Info.plist";
+				INFOPLIST_FILE = "SwiftUI-App/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
