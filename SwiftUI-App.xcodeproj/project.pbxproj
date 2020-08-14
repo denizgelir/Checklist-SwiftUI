@@ -15,6 +15,7 @@
 		5D3B609F24E52E20007A4CCB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B609E24E52E20007A4CCB /* HomeView.swift */; };
 		5D5CAE7A24E53B9600205200 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CAE7924E53B9600205200 /* ItemModel.swift */; };
 		5D5CAE7C24E545AD00205200 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CAE7B24E545AD00205200 /* AddView.swift */; };
+		5D5CAE7E24E67F2A00205200 /* ChecklistRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CAE7D24E67F2A00205200 /* ChecklistRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5D3B609E24E52E20007A4CCB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5D5CAE7924E53B9600205200 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		5D5CAE7B24E545AD00205200 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		5D5CAE7D24E67F2A00205200 /* ChecklistRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				5D3B608C24E5221D007A4CCB /* SceneDelegate.swift */,
 				5D3B609E24E52E20007A4CCB /* HomeView.swift */,
 				5D5CAE7B24E545AD00205200 /* AddView.swift */,
+				5D5CAE7D24E67F2A00205200 /* ChecklistRow.swift */,
 				5D5CAE7924E53B9600205200 /* ItemModel.swift */,
 				5D3B609024E5221F007A4CCB /* Assets.xcassets */,
 				5D3B609524E5221F007A4CCB /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 				5D5CAE7C24E545AD00205200 /* AddView.swift in Sources */,
 				5D5CAE7A24E53B9600205200 /* ItemModel.swift in Sources */,
 				5D3B608D24E5221D007A4CCB /* SceneDelegate.swift in Sources */,
+				5D5CAE7E24E67F2A00205200 /* ChecklistRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,7 +23,7 @@ struct AddView: View {
                     .padding()
                     .navigationBarTitle("Add Activity",displayMode: .inline)
                     .navigationBarItems(trailing: Button(action: {
-                        let item = Item(name: self.itemName, expireDate: self.expireDate)
+                        let item = Item(name: self.itemName, deadline: self.expireDate, isCompleted: false)
                         items.append(item)
                         self.showAddView = false
                     }, label: {

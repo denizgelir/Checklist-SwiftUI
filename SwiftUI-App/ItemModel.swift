@@ -8,10 +8,11 @@
 
 import SwiftUI
 
-var items : [Item] = [Item(name: "First", expireDate: "Today"),
-                      Item(name: "Second", expireDate: "Yesterday")]
+var items : [Item] = [Item(name: "First",deadline: "Today",isCompleted: false),
+                      Item(name: "Second",deadline: "Yesterday",isCompleted: false)]
 
 struct Item : Hashable,Codable {
     var name : String
-    var expireDate : String
+    var deadline : String
+    var isCompleted: Bool
 }

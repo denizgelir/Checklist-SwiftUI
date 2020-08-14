@@ -25,14 +25,9 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             List(items,id: \.name) { item in
-                HStack {
-                    Text(item.name)
-                        .font(.headline)
-                    Spacer()
-                    Text(item.expireDate)
-                        .font(.callout)
+                ChecklistRow(item: item)
+                    .buttonStyle(PlainButtonStyle())
                 }
-            }
             .navigationBarTitle("Check It")
             .navigationBarItems(trailing: addButton)
             .offset(x: 0, y: 20)
