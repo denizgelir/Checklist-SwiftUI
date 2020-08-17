@@ -30,10 +30,10 @@ struct ChecklistRow: View {
                         .frame(width: 30, height: 30)
                         .foregroundColor(.black)
                 }
-                Text(item.name)
+                item.name.map(Text.init)
                     .font(.headline)
                 Spacer()
-                Text(item.deadline)
+                item.deadline.map(Text.init)
                     .font(.callout)
                 Image("forward")
                     .resizable()
@@ -43,7 +43,7 @@ struct ChecklistRow: View {
                     .animation(.easeInOut)
             }
             if isExpanded {
-                Text(item.description)
+                item.detail.map(Text.init)
             }
             Spacer()
         }
@@ -53,6 +53,6 @@ struct ChecklistRow: View {
 
 struct ChecklistRow_Previews: PreviewProvider {
     static var previews: some View {
-        ChecklistRow(item: items[0])
+        ChecklistRow(item: .init())
     }
 }

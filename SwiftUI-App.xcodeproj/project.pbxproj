@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D2DF72A24EAAD7D00604F95 /* ToDoItems.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D2DF72824EAAD7D00604F95 /* ToDoItems.xcdatamodeld */; };
 		5D3B608B24E5221D007A4CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B608A24E5221D007A4CCB /* AppDelegate.swift */; };
 		5D3B608D24E5221D007A4CCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B608C24E5221D007A4CCB /* SceneDelegate.swift */; };
 		5D3B609124E5221F007A4CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3B609024E5221F007A4CCB /* Assets.xcassets */; };
 		5D3B609424E5221F007A4CCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3B609324E5221F007A4CCB /* Preview Assets.xcassets */; };
 		5D3B609724E5221F007A4CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3B609524E5221F007A4CCB /* LaunchScreen.storyboard */; };
 		5D3B609F24E52E20007A4CCB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B609E24E52E20007A4CCB /* HomeView.swift */; };
-		5D5CAE7A24E53B9600205200 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CAE7924E53B9600205200 /* ItemModel.swift */; };
 		5D5CAE7C24E545AD00205200 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CAE7B24E545AD00205200 /* AddView.swift */; };
 		5D5CAE7E24E67F2A00205200 /* ChecklistRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CAE7D24E67F2A00205200 /* ChecklistRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D2DF72924EAAD7D00604F95 /* ToDoItems.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoItems.xcdatamodel; sourceTree = "<group>"; };
 		5D3B608724E5221D007A4CCB /* SwiftUI-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3B608A24E5221D007A4CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D3B608C24E5221D007A4CCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		5D3B609624E5221F007A4CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D3B609824E5221F007A4CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D3B609E24E52E20007A4CCB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		5D5CAE7924E53B9600205200 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		5D5CAE7B24E545AD00205200 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		5D5CAE7D24E67F2A00205200 /* ChecklistRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,7 +65,6 @@
 				5D5CAE8224E6CC0400205200 /* App */,
 				5D5CAE7F24E6CBE000205200 /* Home */,
 				5D5CAE8024E6CBF000205200 /* AddItem */,
-				5D5CAE8124E6CBFB00205200 /* Model */,
 				5D5CAE8324E6CC1000205200 /* Resources */,
 				5D3B609224E5221F007A4CCB /* Preview Content */,
 			);
@@ -97,14 +96,6 @@
 			path = AddItem;
 			sourceTree = "<group>";
 		};
-		5D5CAE8124E6CBFB00205200 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				5D5CAE7924E53B9600205200 /* ItemModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		5D5CAE8224E6CC0400205200 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +103,7 @@
 				5D3B608C24E5221D007A4CCB /* SceneDelegate.swift */,
 				5D3B609524E5221F007A4CCB /* LaunchScreen.storyboard */,
 				5D3B609824E5221F007A4CCB /* Info.plist */,
+				5D2DF72824EAAD7D00604F95 /* ToDoItems.xcdatamodeld */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -198,7 +190,7 @@
 				5D3B608B24E5221D007A4CCB /* AppDelegate.swift in Sources */,
 				5D3B609F24E52E20007A4CCB /* HomeView.swift in Sources */,
 				5D5CAE7C24E545AD00205200 /* AddView.swift in Sources */,
-				5D5CAE7A24E53B9600205200 /* ItemModel.swift in Sources */,
+				5D2DF72A24EAAD7D00604F95 /* ToDoItems.xcdatamodeld in Sources */,
 				5D3B608D24E5221D007A4CCB /* SceneDelegate.swift in Sources */,
 				5D5CAE7E24E67F2A00205200 /* ChecklistRow.swift in Sources */,
 			);
@@ -394,6 +386,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5D2DF72824EAAD7D00604F95 /* ToDoItems.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5D2DF72924EAAD7D00604F95 /* ToDoItems.xcdatamodel */,
+			);
+			currentVersion = 5D2DF72924EAAD7D00604F95 /* ToDoItems.xcdatamodel */;
+			path = ToDoItems.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5D3B607F24E5221D007A4CCB /* Project object */;
 }

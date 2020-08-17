@@ -9,13 +9,20 @@
 import SwiftUI
 
 struct HomeView: View {
-        
+    
+    @FetchRequest(
+        entity: Item.entity(),
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \Item.name, ascending: true)
+        ]
+    ) var items: FetchedResults<Item>
+    @Environment(\.managedObjectContext) var managedObjectContext
     @State private var showAddView = false
     @State private var selection: Set<Item> = []
     
     var addButton: some View {
         Button(action: {
-            self.showAddView.toggle()
+            self.showAddView = true
         }) {
             Image(systemName: "plus")
                 .imageScale(.large)
@@ -25,23 +32,27 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            List(items,id: \.name) { item in
-                ChecklistRow(item: item,isExpanded: self.selection.contains(item))
-                    .buttonStyle(PlainButtonStyle())
-                    .onTapGesture { self.selectDeselect(item: item) }
-                    .animation(.easeInOut)
+            List {
+                ForEach(items,id: \.self) { item in
+                    ChecklistRow(item: item,isExpanded: self.selection.contains(item))
+                        .buttonStyle(PlainButtonStyle())
+                        .onTapGesture { self.selectDeselect(item: item) }
+                        .animation(.easeInOut)
+                }
+                .onDelete(perform: deleteRow)
             }
-            .navigationBarTitle("Check It")
+            .navigationBarTitle("Check That")
             .navigationBarItems(trailing: addButton)
             .offset(x: 0, y: 20)
             .sheet(isPresented: $showAddView) {
                 AddView(showAddView: self.$showAddView)
+                    .environment(\.managedObjectContext, self.managedObjectContext)
             }
         }
         
     }
     
-    func selectDeselect(item: Item) {
+    private func selectDeselect(item: Item) {
         if selection.contains(item) {
             selection.remove(item)
         }else{
@@ -49,6 +60,21 @@ struct HomeView: View {
         }
     }
     
+    private func deleteRow(at indexSet: IndexSet) {
+          indexSet.forEach { index in
+          let item = self.items[index]
+          self.managedObjectContext.delete(item)
+        }
+        saveContext()
+    }
+    
+    func saveContext() {
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("Error saving managed object context: \(error)")
+        }
+    }
     
 }
 
